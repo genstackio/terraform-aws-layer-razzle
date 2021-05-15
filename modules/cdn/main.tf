@@ -4,7 +4,7 @@ resource "aws_cloudfront_origin_access_identity" "oai" {
 resource "aws_cloudfront_distribution" "webapp" {
   origin {
     domain_name = var.s3_master_domain_name // unused domain name
-    origin_id   = "static"
+    origin_id   = "statics"
     origin_path = "/static"
     s3_origin_config {
       origin_access_identity = aws_cloudfront_origin_access_identity.oai.cloudfront_access_identity_path
