@@ -20,6 +20,14 @@ variable "package_file" {
   type    = string
   default = null
 }
+variable "package_s3_bucket" {
+  type    = string
+  default = null
+}
+variable "package_s3_key" {
+  type    = string
+  default = null
+}
 variable "memory_size" {
   type    = number
   default = 1024

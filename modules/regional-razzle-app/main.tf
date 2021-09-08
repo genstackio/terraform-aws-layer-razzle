@@ -1,7 +1,9 @@
 module "lambda" {
   source            = "genstackio/lambda/aws"
-  version           = "0.1.8"
+  version           = "0.1.11"
   file              = var.package_file
+  s3_bucket         = var.package_s3_bucket
+  s3_key            = var.package_s3_key
   name              = var.name
   handler           = var.handler
   timeout           = var.timeout
