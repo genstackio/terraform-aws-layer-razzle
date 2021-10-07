@@ -16,9 +16,6 @@ module "lambda" {
       AWS_NEXT_PROJECT_DIR = "/var/task"
     }
   )
-  providers         = {
-    aws = aws
-  }
 }
 
 module "api" {
@@ -26,7 +23,4 @@ module "api" {
   version    = "0.1.3"
   name       = var.name
   lambda_arn = module.lambda.arn
-  providers  = {
-    aws = aws
-  }
 }

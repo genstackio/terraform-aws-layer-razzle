@@ -23,7 +23,4 @@ module "cdn" {
   s3_master_domain_name       = var.s3_master_domain_name
   regional_statics_buckets    = var.regional_statics_buckets
   regional_razzle_apps        = var.regional_razzle_apps
-  providers                   = {
-    aws = aws
-  }
 }

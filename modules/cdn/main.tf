@@ -251,16 +251,10 @@ module "lambda-origin-request" {
   source      = "../lambda-origin-request"
   name        = "${var.name}-origin-request"
   config_file = local.origin_request_config_file
-  providers = {
-    aws = aws
-  }
 }
 
 module "lambda-origin-response" {
   source      = "../lambda-origin-response"
   name        = "${var.name}-origin-response"
   config_file = local.origin_response_config_file
-  providers = {
-    aws = aws
-  }
 }
